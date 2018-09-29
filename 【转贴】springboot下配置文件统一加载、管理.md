@@ -1,4 +1,11 @@
-pringboot 就不必多说了吧,这货结合dubbo/thrift做微服务棒棒的. 笔者现在做的这个项目就是基于springboot的一堆服务,大约几十个吧. springboot的配置都在application.propertie里,尽管已经约束好了里面的配置,但还有诸多不便性,所以需要一个统一加载机制,来加载公共配置和个性化配置.
+---
+
+本文转自https://my.oschina.net/ilaotan/blog/846456
+
+---
+
+
+springboot 就不必多说了吧,这货结合dubbo/thrift做微服务棒棒的. 笔者现在做的这个项目就是基于springboot的一堆服务,大约几十个吧. springboot的配置都在application.propertie里,尽管已经约束好了里面的配置,但还有诸多不便性,所以需要一个统一加载机制,来加载公共配置和个性化配置.
 
 springCloud是有这么一套来着.本文就是参考的org.springframework.boot.cloud.CloudFoundryVcapEnvironmentPostProcessor 不过找着这个类也是扒拉了好久源代码.
 
@@ -41,6 +48,4 @@ spring.factories 是springboot的一种加载机制.这里不多赘述.
 至于http请求的配置平台,实现得很简单,就是发不同的参数,那边返回json串.
 
 
----
 
-本文转自https://my.oschina.net/ilaotan/blog/846456
