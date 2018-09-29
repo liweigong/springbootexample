@@ -6,7 +6,7 @@ springCloud是有这么一套来着.本文就是参考的org.springframework.boo
 
 
 
-"
+```
 
 public class LoadThirdEnv implements EnvironmentPostProcessor, Ordered {
     @Override
@@ -25,14 +25,14 @@ public class LoadThirdEnv implements EnvironmentPostProcessor, Ordered {
     }
 }
 
-"
+```
 
 对,没错,就是这么几行. 还不够,还需要在resources/META-INF/spring.factories里添加
 
-"
+```
 org.springframework.boot.env.EnvironmentPostProcessor=\
  com.ilaotan.LoadThirdEnv
-"
+```
 
 好了,完工. springboot的配置文件参数,可以精简到几个. 其他都从http加载.以后需要改参数,直接配置平台改完,重启这个springboot服务即可.
 
